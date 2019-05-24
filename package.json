@@ -4,8 +4,11 @@
   "description": "solo project for chingu pre-work",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
+  },
+  "jest": {
+        "testPathIgnorePatterns": [".c9"]
   },
   "author": "rdollent",
   "license": "ISC",
@@ -16,6 +19,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
+    "jest": "^24.8.0",
     "node-sass": "^4.12.0",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",

@@ -24,7 +24,7 @@ class Search extends React.Component {
         // fetch
         fetch('https://data.nasa.gov/resource/gh4g-9sfh.json', {
             method: 'GET'
-        })
+            })
             .then(res => res.json())
             .then((data) => {
                 console.log(data);
