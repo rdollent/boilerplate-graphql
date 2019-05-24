@@ -15,7 +15,9 @@ const store = require('store').createStore();
 
 const unsubscribe = store.subscribe( () => {
     console.log('New state is ', store.getState());
-})
+});
+
+require('appStyle');
 
 
 ReactDOM.render(
