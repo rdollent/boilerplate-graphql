@@ -8,7 +8,9 @@
     "start": "node server.js"
   },
   "jest": {
-        "testPathIgnorePatterns": [".c9"]
+    "testPathIgnorePatterns": [
+      ".c9"
+    ]
   },
   "author": "rdollent",
   "license": "ISC",
@@ -30,8 +32,8 @@
     "webpack-cli": "^3.3.2"
   },
   "dependencies": {
-    "express": "^4.17.0",
-    "pg-promise": "^8.6.4",
+    "express": "^4.17.1",
+    "pg-promise": "^8.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
