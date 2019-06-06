@@ -6,6 +6,7 @@ const path = require('path');
 // const cookieParser = require('cookie-parser');
 // const cors = require('cors');
 // const expressValidator = require('express-validator');
+// const cookieParser = require('cookie-parser');
 
 // Routes
 // const authRoutes = require('./routes/auth');

@@ -4,10 +4,10 @@ const path = require('path');
 
 module.exports = {
     entry: [
-        './app/app.jsx'
+        './client/app/app.jsx'
     ],
     output: {
-        path: path.resolve(__dirname,'public'),
+        path: path.resolve(__dirname + '/client/','public'),
         filename: 'bundle.js'
     },
     resolve: {
