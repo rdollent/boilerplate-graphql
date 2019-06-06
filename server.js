@@ -34,7 +34,7 @@ const PORT = process.env.PORT || 3000;
 
 
 // set directory for public files. in my case, use folder called public
-const staticPath = path.join(__dirname, '/public');
+const staticPath = path.join(__dirname, '/client/public');
 app.use(express.static(staticPath));
 
 // set port property of app to use PORT
