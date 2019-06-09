@@ -10,7 +10,7 @@ const {Provider} = require('react-redux');
 // that way, you don't need to list every jsx component in alias in webpack.config.js
 const Main = require('Main');
 
-const actions = require('actions');
+// const actions = require('actions');
 const store = require('store').createStore();
 
 const unsubscribe = store.subscribe( () => {

@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const expressValidator = require('express-validator');
+const graphqlHTTP = require('express-graphql');
+const schema = require('./schema/schema');
 
 
 // Routes
@@ -32,6 +34,13 @@ app.use(cookieParser());
 
 // Routes will begin with `/api/auth`
 // app.use('/api/auth', authRoutes);
+
+// bind express with graphql
+// graphql - alternative to routes (REST API architecture)
+app.use('/graphql', graphqlHTTP({
+    schema,
+    graphiql: true
+}));
 
 
 // set directory for public files. in my case, use folder called public
