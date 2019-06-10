@@ -1,14 +1,14 @@
-const React = require('react');
+import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-const Search = require('Search');
-const Results = require('Results');
+import Search from 'Search';
+// const Results = require('Results');
 
 
 // apollo client setup
 const client = new ApolloClient({
-    uri: 'http://localhost:3000/graphql'
+    uri: 'https://boilerplate-graphql-rdollent.c9users.io/graphql' || 'https://localhost:3000/graphql'
 });
 
 class Main extends React.Component {
@@ -18,17 +18,16 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div>
             <ApolloProvider client={client}>
                 <div id='main'>
                     <Search/>
                 </div>
             </ApolloProvider>
-            </div>
         );
     }
 }
 
-module.exports = Main;
+// module.exports = Main;
 
-// export default Main;
+// cannot mix import with module.exports
+export default Main;
