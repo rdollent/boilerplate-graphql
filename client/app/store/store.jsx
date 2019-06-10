@@ -9,7 +9,6 @@ const thunk = require('redux-thunk').default;
 const {inputReducer} = require('reducers');
 // export a function that returns store variable
 export const createStore = () => {
-        
     // argument is a set of key-value pairs
     // represents item and state you want this reducer to manage
     // state: reducer function

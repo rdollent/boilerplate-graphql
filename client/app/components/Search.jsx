@@ -1,6 +1,6 @@
 import React from 'react';
 // need connect function to be able to connect to store from Provider
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { graphql, compose } from 'react-apollo';
 import { getUserQuery, getAuthorsQuery, addBookMutation, getBooksQuery } from '../../../api/queries/queries.js';
 
@@ -50,7 +50,8 @@ class Search extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return state.inputReducer;
+    return state.input;
+    
 };
   
 const mapDispatchToProps = (dispatch) => {

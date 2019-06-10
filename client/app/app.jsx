@@ -11,7 +11,8 @@ import {Provider} from 'react-redux';
 import Main from 'Main';
 
 // const actions = require('actions');
-const store = require('store').createStore();
+import {createStore} from './store/store';
+const store = createStore();
 
 const unsubscribe = store.subscribe( () => {
     console.log('New state is ', store.getState());
