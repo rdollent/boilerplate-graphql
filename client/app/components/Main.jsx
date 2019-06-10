@@ -1,9 +1,10 @@
 const React = require('react');
-const ApolloClient = require('apollo-boost');
-const { ApolloProvider } = require('react-apollo');
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 const Search = require('Search');
 const Results = require('Results');
+
 
 // apollo client setup
 const client = new ApolloClient({
@@ -17,14 +18,17 @@ class Main extends React.Component {
 
     render() {
         return (
+            <div>
             <ApolloProvider client={client}>
                 <div id='main'>
                     <Search/>
-                    <Results/>
                 </div>
             </ApolloProvider>
+            </div>
         );
     }
 }
 
 module.exports = Main;
+
+// export default Main;

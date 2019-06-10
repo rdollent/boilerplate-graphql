@@ -51,7 +51,7 @@ const RootQuery = new GraphQLObjectType({
             type: UserType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args){
-                return 
+                return User.findAll();
                 // User.findById(args.id);
                 // insert model pg-promise method
             }

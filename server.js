@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const expressValidator = require('express-validator');
 const graphqlHTTP = require('express-graphql');
-const schema = require('./schema/schema');
+const schema = require('./api/schema/schema');
 
 
 // Routes

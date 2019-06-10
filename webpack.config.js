@@ -3,6 +3,7 @@ const path = require('path');
 
 
 module.exports = {
+    mode: 'development',
     entry: [
         './client/app/app.jsx'
     ],
@@ -17,7 +18,9 @@ module.exports = {
             'reducers',
             'store',
             'actions',
-            'styles'
+            'styles',
+            'queries',
+            'api'
         ],
         alias: {
 
@@ -42,6 +45,11 @@ module.exports = {
             exclude: /(node_modules|bower_components)/,
             use: ['style-loader', 'css-loader', 'sass-loader']
             
+          },
+          {
+            test: /\.mjs$/,
+            include: /node_modules/,
+            type: "javascript/auto"
           }
         ]
     }
