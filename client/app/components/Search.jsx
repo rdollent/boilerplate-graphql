@@ -2,7 +2,9 @@ import React from 'react';
 // need connect function to be able to connect to store from Provider
 import { connect } from 'react-redux';
 import { graphql, compose } from 'react-apollo';
-import { getUserQuery, getAuthorsQuery, addBookMutation, getBooksQuery } from '../../../api/queries/queries.js';
+import { getUserQuery } from '../../../api/queries/queries.js';
+
+// , getAuthorsQuery, addBookMutation, getBooksQuery } 
 
 import * as actions from '../actions/actions';
 
@@ -68,8 +70,8 @@ const Container = connect(mapStateToProps, mapDispatchToProps)(Search);
 // export default Search;
 
 export default compose(
-    graphql(getAuthorsQuery, { name: "getAuthorsQuery" }),
-    graphql(addBookMutation, { name: "addBookMutation" }),
+    // graphql(getAuthorsQuery, { name: "getAuthorsQuery" }),
+    // graphql(addBookMutation, { name: "addBookMutation" }),
     graphql(getUserQuery, { name: "getUserQuery" })
 )(Container);
 
