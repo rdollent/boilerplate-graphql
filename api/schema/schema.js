@@ -15,8 +15,8 @@ const {
 
 const UserType = new GraphQLObjectType({
     name: 'User',
-    fields: ( ) => ({
-        id: { type: GraphQLID },
+    fields: () => ({
+        // id: { type: GraphQLID },
         username: { type: GraphQLString },
         email: { type: GraphQLString }
         // ,
@@ -49,9 +49,14 @@ const RootQuery = new GraphQLObjectType({
     fields: {
         user: {
             type: UserType,
-            args: { id: { type: GraphQLID } },
-            resolve(parent, args){
-                return User.findAll();
+            // args: { id: { type: GraphQLID } },
+            async resolve(parent, args){
+                let result = await User.findAll()
+                .then((data) => data)
+                .then((d) => d)
+                .catch(err => err);
+                console.log(result);
+                return result[0];
                 // User.findById(args.id);
                 // insert model pg-promise method
             }
