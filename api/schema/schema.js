@@ -1,5 +1,6 @@
 const graphql = require('graphql');
 const User = require('../models/User');
+const UserController = require('../controllers/user');
 // const Author = require('../models/author');
 // const _ = require('lodash');
 
@@ -51,6 +52,7 @@ const RootQuery = new GraphQLObjectType({
             type: UserType,
             // args: { id: { type: GraphQLID } },
             async resolve(parent, args){
+                console.log('controller is ', UserController);
                 let result = await User.findAll()
                 .then((data) => data)
                 .then((d) => d)

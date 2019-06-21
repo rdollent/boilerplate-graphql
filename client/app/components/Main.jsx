@@ -8,7 +8,7 @@ import Search from 'Search';
 
 // apollo client setup
 const client = new ApolloClient({
-    uri: 'https://boilerplate-graphql-rdollent.c9users.io/graphql' || 'https://localhost:3000/graphql'
+    uri:  'http://localhost:3000/graphql' || 'https://boilerplate-graphql-rdollent.c9users.io/graphql'
 });
 
 class Main extends React.Component {
