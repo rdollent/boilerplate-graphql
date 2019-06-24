@@ -3,7 +3,7 @@ const keys = require('../config/keys');
 
 const setupDB = () => {
   if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
-    console.log('config fires');
+    console.log('config.js fires');
     return pgp({
       database: keys.databaseName,
       port: 5432,

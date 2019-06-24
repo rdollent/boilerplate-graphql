@@ -52,12 +52,12 @@ const RootQuery = new GraphQLObjectType({
             type: UserType,
             // args: { id: { type: GraphQLID } },
             async resolve(parent, args){
-                console.log('controller is ', UserController);
+                console.log('schema.js controller is ', UserController);
                 let result = await User.findAll()
                 .then((data) => data)
                 .then((d) => d)
                 .catch(err => err);
-                console.log(result);
+                console.log('schema.js', result);
                 return result[0];
                 // User.findById(args.id);
                 // insert model pg-promise method

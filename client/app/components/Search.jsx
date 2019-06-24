@@ -35,7 +35,7 @@ class Search extends React.Component {
                 throw new Error(err);
             });
         const data = this.props.getUserQuery;
-        data.then(d => console.log(d));
+        data.then(d => console.log('users are ', d));
     }
 
     render() {
